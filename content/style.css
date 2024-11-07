@@ -70,6 +70,7 @@ button:hover {
 }
 
 .add-btn {
+    width: 600px;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -77,8 +78,24 @@ button:hover {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
+    font-size: 1.0em;
 }
 
 .add-btn:hover {
     background-color: #45a049;
+}
+
+.delete-todo {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-todo button {
+    flex: 1;
+    padding: 12px 24px;
+    font-size: 1.0em;
 }

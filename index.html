@@ -11,15 +11,24 @@
     <div>
         <h1>Todo List</h1>
     </div>
-    <input id="task-input" type="text" placeholder="Enter your task">
-    <br>
-    <input id="date-input" type="date" min="2022-01-01" required>
-    <input id="time-input" type="time" min="00:00" required>
-    <br>
-    <button onclick="addTodo()">Add todo!</button>
-    <br>
-    <button onclick="deleteLastTodo()">Delete the last Todo</button>
-    <button onclick="deleteFirstTodo()">Delete the first Todo</button>
+    <div class="add-todo">
+        <input id="task-input" type="text" placeholder="Enter your task">     
+    </div>
+
+    <div class="add-todo">
+        <input id="date-input" type="date" min="2022-01-01" required>
+        <input id="time-input" type="time" min="00:00" required> 
+    </div>
+        
+    <div class="add-todo">
+        <button class="add-btn" onclick="addTodo()">Add todo!</button>
+    </div>
+
+    <div class="delete-todo">
+        <button onclick="deleteLastTodo()">Delete the last Todo</button>
+        <button onclick="deleteFirstTodo()">Delete the first Todo</button>
+    </div>
+    
     <div id="todos">
 
     </div>

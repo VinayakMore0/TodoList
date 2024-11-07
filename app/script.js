@@ -38,11 +38,13 @@ function saveTitle(index, newTitle) {
 
 function createTodoComponets(todo, index) {
     const div = document.createElement("div");
-    const h2 = document.createElement("h2");
+    const h3 = document.createElement("h3");
     const date = document.createElement("span");
     const time = document.createElement("span");
     const editButton = document.createElement("button");
     const deleteButton = document.createElement("button");
+
+    div.setAttribute("class", 'todo-item');
 
     deleteButton.innerHTML = "Delete";
     deleteButton.setAttribute("onclick", "deleteTodoAt(" + index + ")");
@@ -63,22 +65,22 @@ function createTodoComponets(todo, index) {
 
         div.append(input, saveButton);
     }else {
-        const h2 = document.createElement("h2");
-        h2.innerHTML = (index + 1) + ". " + todo.title;
+        const h3 = document.createElement("h3");
+        h3.innerHTML = (index + 1) + ". " + todo.title;
         
         const editButton = document.createElement("button");
         editButton.innerHTML = "Edit";
         editButton.setAttribute("onclick", "toggleEditTitle(" + index + ")");
 
-        h2.appendChild(editButton);
-        div.appendChild(h2);
+        h3.appendChild(editButton);
+        div.appendChild(h3);
     }
 
     const formattedDateTime = formatDateTime(todo.date, todo.time);
     date.innerHTML = formattedDateTime.split(",")[0];
     time.innerHTML = formattedDateTime.split(",")[1];
 
-    div.append(h2);
+    div.append(h3);
     div.append(date);
     div.append(time);
     div.append(deleteButton);

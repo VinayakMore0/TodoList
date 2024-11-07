@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List: for your Daily Tasks.</title>
+    <link rel="shortcut icon" href="content/todo-favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="content/style.css">
+</head>
+<body>
+    <div>
+        <h1>Todo List</h1>
+    </div>
+    <input id="task-input" type="text" placeholder="Enter your task">
+    <br>
+    <input id="date-input" type="date" min="2022-01-01" required>
+    <input id="time-input" type="time" min="00:00" required>
+    <br>
+    <button onclick="addTodo()">Add todo!</button>
+    <br>
+    <button onclick="deleteLastTodo()">Delete the last Todo</button>
+    <button onclick="deleteFirstTodo()">Delete the first Todo</button>
+    <div id="todos">
+
+    </div>
+    
+    <script src="app/script.js"></script>
+
+</body>
+</html>

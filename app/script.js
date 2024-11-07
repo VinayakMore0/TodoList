@@ -1,10 +1,19 @@
 let todos = [];
 
 function addTodo() {
+    const title = document.getElementById("task-input").value;
+    const date = document.getElementById("date-input").value;
+    const time = document.getElementById("time-input").value;  
+
+    if(title === '' || date === '' || time === '') {
+        alert('Please enter a todo item.')
+        return;
+    }
+
     todos.push({
-        title: document.getElementById("task-input").value,
-        date: document.getElementById("date-input").value,
-        time: document.getElementById("time-input").value,
+        title: title,
+        date: date,
+        time: time,
         isEditing: false
     })
     render();
